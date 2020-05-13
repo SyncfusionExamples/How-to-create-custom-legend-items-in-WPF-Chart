@@ -98,5 +98,4 @@ Custom legend items are achieved by adding required LegendItem count to ChartLeg
             info?.Invoke(chart, new object[] { true }); 
         } 
 ```
-**Output**
-[](\custom-legend-with-toggle.png)
+
