@@ -99,3 +99,6 @@ Custom legend items are achieved by adding required LegendItem count to ChartLeg
         } 
 ```
 
+KB article - [How-to-create-custom-legend-items-in-WPF-Chart](https://www.syncfusion.com/kb/10675/how-to-create-custom-legend-items-in-wpf-chart)
+
+
