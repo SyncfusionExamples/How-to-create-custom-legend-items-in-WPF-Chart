@@ -1,29 +1,11 @@
-﻿using Syncfusion.UI.Xaml.Charts;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Collections;
-using System.Reflection;
-
-namespace Sample1
+﻿namespace CustomLegendSample
 {
+    using Syncfusion.UI.Xaml.Charts;
+    using System.Collections.ObjectModel;
+    using System.Reflection;
+    using System.Windows;
+    using System.Windows.Controls;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -57,7 +39,7 @@ namespace Sample1
 
             legend.ItemTemplate = grid.Resources["itemTemplate"] as DataTemplate;
             chart.Legend = legend;
-         
+
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
@@ -103,44 +85,8 @@ namespace Sample1
             info?.Invoke(chart, new object[] { true });
         }
     }
-    public class Model
-    {
-        public string XValue { get; set; }
-        public double YValue { get; set; }
-    }
 
-        public class ViewModel
-        {
-            public ViewModel()
-            {
-                GenerateData();
-            }
-
-            public void GenerateData()
-            {
-                Data = new ObservableCollection<Model>();
-                Random rd = new Random();
-                for (int i = 0; i < 6; i++)
-                {
-                    Data.Add(new Model()
-                    {
-                        XValue = "Label" +i.ToString(),
-                        YValue = rd.Next(0, 50)
-                    });
-                }
-            }
-
-            private ObservableCollection<Model> data;
-
-            public ObservableCollection<Model> Data
-            {
-                get { return data; }
-                set { data = value; }
-            }
-
-        }
-       
-    public class PieSeriesExt :PieSeries
+    public class PieSeriesExt : PieSeries
     {
         public ObservableCollection<ChartSegment> ChartSegments
         {
@@ -150,5 +96,4 @@ namespace Sample1
             }
         }
     }
-    
 }

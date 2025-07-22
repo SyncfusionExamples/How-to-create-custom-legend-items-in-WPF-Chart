@@ -97,8 +97,16 @@ private void UpdateArea()
 
 ## Output:
 
+The following demo image illustrates creating custom legend items, with and without toogle functionality in WPF, following the implemented steps.
+
 ![custom legend without toggle wpf chart.png](custom-legend-without-toggle.png)
 
 ![custom legend with toggle wpf chart](custom-legend-with-toggle.png)
 
-KB article - [How to create custom legend items in WPF Chart?](https://www.syncfusion.com/kb/10675/how-to-create-custom-legend-items-in-wpf-chart)
+## Troubleshooting
+
+#### Path too long exception
+
+If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project.
+
+For more details, refer to the KB on [How to create custom legend items in WPF Chart](https://www.syncfusion.com/kb/10675/how-to-create-custom-legend-items-in-wpf-chart).
